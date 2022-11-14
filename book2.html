@@ -1,0 +1,179 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+.form-control
+{
+    
+    height:5%;
+    width:80% ;
+    margin-left: 10%;
+
+    
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+  margin-left: 10%;
+
+  
+  text-align: center;
+}
+    
+
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+h2{
+    text-align:center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+
+}
+p{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-image: url("bag.jpg")
+}
+.buttonb1{border-radius: 50%;
+    background-color: #daeeee; 
+    border: none;
+    color:black;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+    margin-left: 85% ;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 2%;
+
+    width: 150px;
+}
+
+</style>
+</head>
+<body>
+    <button class="buttonb1 " onclick="document.location='file:///C:/Users/Sriya/bookspot/home.html'">HOME</button>
+
+    <h2>List Of Books</h2>
+    <p>Search below</p>  
+    <input class="form-control" id="myInput" type="text" placeholder="Search..">
+    <br>
+
+
+<table id="etable" width="100%">
+  <tr>
+    <th>BookName</th>
+    <th>Author</th>
+    <th>Genre</th>
+    <th>Year Of Publlish</th>
+  </tr>
+  <tbody id="myTable">
+
+  
+  
+    <tr>
+        <td>A Week with Gandhi</td>
+        <td>Louis Fisher</td>
+        <td>fiction</td>
+        <td>08-12-1989</td>
+      </tr>
+      <tr>
+
+    <td>Harry Potter</td>
+    <td>Rowling</td>
+    <td>fiction</td>
+
+    <td>1990</td>
+  </tr>
+  <tr>
+    
+    <td>Amar Chitra</td>
+    <td>Jean De</td>
+    <td>Drama</td>
+
+    <td>2000</td>
+  </tr>
+  <tr>
+    
+    <td>Brittania Discovery</td>
+    <td>Ruskin</td>
+    <td>Scientfic </td>
+
+    <td>1994</td>
+  </tr>
+  <tr>
+    
+    <td>The Complete Harry Potter Collection</td>
+    <td>Rowling</td>
+    <td> Fiction</td>
+
+    <td>1995</td>
+  </tr>
+  <tr>
+    
+    <td>The Animal Family</td>
+    <td>Randall Jarrell</td>
+    <td>Fiction</td>
+
+    <td>1985</td>
+  </tr>
+  <tr>
+    
+    <td>Chronicles of Narnia</td>
+    <td>Lewis</td>
+    <td> Scientific</td>
+
+    <td>1985</td>
+  </tr>
+  <tr>
+    
+    <td>How Do Dinosaurs Go?</td>
+    <td>Jane Yolen</td>
+    <td> Humor</td>
+
+    <td>1975</td>
+  </tr>
+  <tr>
+    
+    <td>Mary Poppins</td>
+    <td>Pamela L</td>
+    <td>comedy</td>
+    <td>1985</td>
+  </tr>
+  <tr>
+   
+    <td>Little Bunny Follows His Nose</td>
+    <td>Katherine</td>
+    <td>fiction</td>
+    <td>1973</td>
+</tbody>
+</table>
+
+<script>
+    $(document).ready(function(){
+      $("#myInput").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#myTable tr").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
+    </script>
+</body>
+</html>
+
